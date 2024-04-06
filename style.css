@@ -1,0 +1,351 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+section {
+    padding: 3rem 9%;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+.logo {
+    font-family: Brush Script MT, cursive;
+    font-size: 34px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0 9%;
+    background: white;
+}
+
+.header .navbar ul {
+    list-style: none;
+}
+
+.header .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.header .navbar ul li:hover ul {
+    display: block;
+}
+
+.header .navbar ul li a {
+    padding: 2rem;
+    display: block;
+    font-size: 1.7rem;
+    color: black;
+}
+
+.header .navbar ul li a:hover {
+    background: #ff7878;
+    color: white
+}
+
+.header .navbar ul li ul {
+    position: absolute;
+    left: 0;
+    width: 20rem;
+    background: #ff7878;
+    display: none;
+}
+
+.header .navbar ul li ul li {
+    width: 100%;
+}
+
+#menu-btn {
+    cursor: pointer;
+    color: #ff7878;
+    font-size: 2.5rem;
+    display: none;
+}
+
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+    section {
+        padding: 3rem 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #menu-btn {
+        display: inline-block;
+    }
+    .header {
+        padding: 2rem;
+    }
+    .header .navbar {
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background: white;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    .header .navbar.active {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    .header .navbar ul li {
+        width: 100%;
+    }
+    .header .navbar ul li ul {
+        width: 100%;
+        position: relative;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+
+.heading {
+    font-family: Brush Script MT, cursive;
+    margin-top: 20px;
+    margin-bottom: -10px;
+    font-size: 40px;
+    text-align: center;
+    color: #333; 
+}
+
+.heading span {
+    font-family: Brush Script MT, cursive;
+    font-weight: bold;
+    color: #FF7878;
+}
+
+#about {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: lightpink;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+.about-section {
+    display: flex;
+    align-items: center;
+}
+.about-section img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); 
+}
+.about-details {
+    padding-left: 50px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+table, th, td {
+    border: 2px solid #FF7878;
+    padding: 15px;
+    font-size: 18px;
+    text-align: left;
+}
+th {
+    background-color: #FFB3B3;
+}
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-top: 20px;
+    text-align: justify;
+}
+@media only screen and (max-width: 800px) {
+    .container {
+        padding: 20px;
+    }
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-section img {
+        margin-bottom: 20px;
+    }
+    .about-details {
+        padding-left: 0;
+    }
+}
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 3rem;
+    background: #e9edfb;
+    color: #FF7878;
+    cursor: pointer;
+    border-radius: .5rem;
+    font-size: 1.7rem;
+}
+
+.btn:hover {
+    color: #fff;
+    background: #FF7878;
+}
+
+.skills {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(16rem, 1fr))[auto-fit];
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 1.5rem;
+}
+
+.skills .box {
+    border-radius: 1rem;
+    background: lightpink;
+    padding: 4rem 3rem;
+    text-align: center;
+}
+
+.skills .box img {
+    height: 7rem;
+    margin-bottom: 2rem;
+}
+
+.skills .box h3 {
+    text-align: center;
+    font-size: 18px;
+    color: black;
+}
+
+.projects {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(16rem, 1fr))[auto-fit];
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 1.5rem;
+}
+
+.projects .box {
+    border-radius: 1rem;
+    background: lightpink;
+    padding: 4rem 3rem;
+    text-align: center;
+}
+
+.projects .box img {
+    height: 7rem;
+    margin-bottom: 2rem;
+}
+
+.projects .box h3 {
+    text-align: center;
+    font-size: 18px;
+    color: black;
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 30px;
+  background-color: lightpink;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section {
+    display: flex;
+    align-items: center;
+}
+.contact-details {
+    padding-left: 50px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+table, th, td {
+    border: 2px solid #FF7878;
+    padding: 15px;
+    font-size: 18px;
+    text-align: left;
+}
+th {
+    background-color: #FFB3B3;
+}
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-top: 20px;
+    text-align: justify;
+}
+@media only screen and (max-width: 800px) {
+    .container {
+        padding: 20px;
+    }
+    .contact-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .contact-details {
+        padding-left: 0;
+    }
+}
+
+.footer .credit {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    padding-top: 2.5rem;
+    font-size: 18px;
+    color: black;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+}
+
+.footer .credit span {
+    color: #FF7878;
+    text-decoration: none;
+}
